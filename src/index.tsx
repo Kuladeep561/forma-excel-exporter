@@ -30,11 +30,14 @@ function App() {
 
         for (let path of selectedPaths) {
             if (buildingPaths.includes(path)) {
-                const projectMetadata = await Forma.project.get()
-                const areaMetrics = await Forma.areaMetrics.calculate({ paths: [path] });
-                console.log(JSON.stringify(projectMetadata))
-                // Add the building name and area metrics to the buildingData state variable
-                setBuildingData(prevData => [...prevData, { name: inputValue, path, areaMetrics }]);
+              const areaMetrics = await Forma.areaMetrics.calculate({
+                paths: [path],
+              });
+              // Add the building name and area metrics to the buildingData state variable
+              setBuildingData((prevData) => [
+                ...prevData,
+                { name: inputValue, path, areaMetrics },
+              ]);
             }
         }
     };
