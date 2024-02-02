@@ -1,0 +1,73 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #222;
+    background-color: #ffffff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #673ab8;
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+}
+
+header nav {
+	display: flex;
+
+}
+header a {
+    color: #fff;
+    padding: 0.75rem;
+    text-decoration: none;
+    font-weight: 600; /* Make the text bolder */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add a box shadow */
+    transition: background-color 0.3s ease; /* Add a transition for the hover effect */
+}
+
+header a.active {
+    background-color: #0005;
+}
+
+header a:hover {
+    background-color: #0008;
+}
+
+
+input[type="text"] {
+    margin-right: 0.5rem; /* Add a right margin to the input box */
+    background-color: #ffffff; /* Set the background color to white */
+    border: 2px solid #333; /* Add a dark border */
+}
+main {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 639px) {
+    main {
+        margin: 2rem;
+    }
+}
