@@ -4,13 +4,5 @@ import preact from '@preact/preset-vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/forma-excel-exporter/",
-  plugins: [
-    preact({
-      prerender: {
-        enabled: true,
-        renderTarget: "#app",
-        additionalPrerenderRoutes: ["/404"],
-      },
-    }),
-  ],
+  plugins: [preact()],
 });
